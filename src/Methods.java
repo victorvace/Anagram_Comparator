@@ -4,19 +4,9 @@ import java.io.FileReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
+
 
 public class Methods {
-
-    public static boolean isAnagram(String string1, String string2) {
-
-        char[] array1 = string1.toCharArray();
-        char[] array2 = string2.toCharArray();
-
-        Arrays.sort(array1);
-        Arrays.sort(array2);
-        return new String(array1).equals(new String(array2));
-    }
 
     public static ArrayList<String> preProcessing() {
 
