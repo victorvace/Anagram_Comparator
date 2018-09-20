@@ -1,14 +1,14 @@
+package helpers;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.ArrayList;
 
 
-public class Methods {
+public class Preprocesor {
 
-    public static ArrayList<String> preProcessing() {
+    public static ArrayList<String> preProcessing() throws Exception {
 
         ArrayList<String> preLoadFile = new ArrayList<>();
         FileReader fr = null;
@@ -24,12 +24,6 @@ public class Methods {
                 preLoadFile.add(line);
             }
 
-        } catch (FileNotFoundException e) {
-            System.err.println("The file doesn't exist");
-            e.printStackTrace();
-        } catch (IOException e) {
-            System.err.println("IO error");
-            e.printStackTrace();
         } finally {
             try {
                 if (null != fr) {
